@@ -1,6 +1,6 @@
 import { Footer, Navbar } from "layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "pages";
+import { Catalog, ClutchBags, Home, Runners } from "pages";
 import { Grid } from "@chakra-ui/react";
 
 function App() {
@@ -8,13 +8,14 @@ function App() {
     <>
       <Navbar />
 
-      <Router>
-        <Grid>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </Grid>
-      </Router>
+      <Grid>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/runners" element={<Runners />} />
+          <Route path="/clutch-bags" element={<ClutchBags />} />
+        </Routes>
+      </Grid>
 
       <Footer />
     </>

@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text, Image } from "@chakra-ui/react";
-import { MockTestimonials } from "constants/testimonials";
+import { MockTestimonials } from "constants/data";
 import Slider from "react-slick";
 
 function Testimonials() {

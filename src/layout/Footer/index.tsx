@@ -8,6 +8,8 @@ import {
   Icon,
   Text,
   Link,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
 
 import {
@@ -23,22 +25,29 @@ import {
 function Footer() {
   return (
     <Flex bg="black" color="white" py={10} px="20%" flexWrap="wrap">
-      <Flex className="w-[100%] gap-2 mb-10">
-        <Input
-          placeholder="Enter your email"
-          bg="white"
-          color="black"
-          border="none"
-          _placeholder={{ color: "gray.500" }}
-        />
-        <IconButton
-          aria-label="Subscribe"
-          icon={<FaArrowRight />}
-          ml={2}
-          bg="orange.500"
-          color="white"
-          _hover={{ bg: "orange.600" }}
-        />
+      <Flex className="w-[100%] gap-3 mb-10">
+        <InputGroup className="mr-5">
+          <Input
+            rounded="none"
+            placeholder="Enter your email"
+            bg="white"
+            color="black"
+            border="none"
+            _placeholder={{ color: "gray.500" }}
+          />
+          <InputRightElement>
+            <IconButton
+              rounded="none"
+              aria-label="Subscribe"
+              icon={<FaArrowRight />}
+              ml={2}
+              bg="orange.500"
+              color="white"
+              _hover={{ bg: "orange.600" }}
+            />
+          </InputRightElement>
+        </InputGroup>
+
         <IconButton
           as="a"
           href="#"
